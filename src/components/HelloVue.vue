@@ -8,15 +8,22 @@ const data = {
     class: 'hi',
     id: 'hi',
 }
+const dynamicProp = 'placeholder'
+const dynamicValue = 'Enter your name'
 </script>
 
 <template>
     <h1 v-bind:class="classHello">Hello Vue!</h1>
+
     <div>{{ message }}</div>
+
     <div :id :class="classHello" v-html="message"></div>
 
     <h1 v-bind="data">Hello Vue!!!!</h1>
+
     <h1 v-bind:class="data.class" :id="data.id" >Cihuuuuy</h1>
+    
+    <input type="text" :[dynamicProp]="dynamicValue">
 </template>
 
 <style scoped>
