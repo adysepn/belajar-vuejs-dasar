@@ -12,7 +12,7 @@ const items = [
     },
     {
         id: 3,
-        title: 'Belajar Javascript',
+        title: 'Belajar Javascript 2',
         completed: false
     },
 ]
@@ -20,15 +20,31 @@ const items = [
 
 <template>
     <h1>Todo List</h1>
-    <ul v-for="item in items">
+    <ul v-for="item in items" :key="item.id"> <!-- :key="item.id" digunakan untuk memberikan key pada element yang diulang -->
         <li v-for="(value, key) in item">
             {{ key }}: {{ value }}
         </li>
     </ul>
+
+    <h1>Completed Task</h1>
+    <template v-for="item in items" :key="item.id">
+        <ul v-if="item.completed">
+            <li>{{ item.title }}</li>
+        </ul>
+    </template>
+    
+    <h1>Uncompleted Task</h1>
+    <template v-for="item in items" :key="item.id">
+        <ul v-if="!item.completed">
+            <li>{{ item.title }}</li>
+        </ul>
+    </template>
     <!-- <div v-for="i in 10"> div akan diulang sebanyak 10 kali
         <p>Hallo {{ i }}</p>
     </div> -->
-    <p v-for="i in 10">Hallo {{ i }}</p>
+    <h1 v-for="i in 10">Hallo {{ i }}</h1>
+
+
 </template>
 
 <style scoped>

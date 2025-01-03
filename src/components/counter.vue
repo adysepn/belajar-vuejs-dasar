@@ -1,10 +1,12 @@
 <script setup>
 import { nextTick, ref } from 'vue';
+
+const props = defineProps(['name', 'initialCount']);
+
 let counter = ref({
-    count: 0,
+    count: Number(props.initialCount),
     name: 'Ady'
 });
-
 
 async function increment() {
     console.log(`increment counter: ${counter.value.count}`);
@@ -30,7 +32,7 @@ async function increment() {
 
 <template>
     <div>
-        <h1 id="counter">counter {{ counter.name }} : {{ counter.count }}</h1>
+        <h1 id="counter">counter {{ props.name }} : {{ counter.count }}</h1>
         <button v-on:click="increment">Increment</button>
     </div>
 </template>

@@ -10,10 +10,13 @@ export default defineConfig({
         main: 'index.html',
         hello: 'hello.html',
         counter: 'counter.html',
-        sayHello: 'sayHello.html',
+        sayhello: 'say-hello.html',
         style: 'style.html',
         score: 'score.html',
-        todoList: 'todoList.html',
+        todolist: 'todolist.html',
+        contact: 'contact.html',
+        product: 'product.html',
+        note: 'note.html',
       }
     }
   }
