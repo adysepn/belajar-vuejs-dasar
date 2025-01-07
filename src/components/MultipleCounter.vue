@@ -8,15 +8,19 @@ const nama2 = 'Bido';
 
 const counter = ref(0);
 
+function increment(value) {
+    counter.value += value;
+}
 </script>
 
 <template>
+    <!-- Ini contoh penggunaan prop -->
     <Counter :name="nama1" initial-count="200"/>
-    <Counter :name="nama2" initial-count="300"/>
+    <Counter :name="nama2" initial-count="300"/><br>
 
-    <CounterStateless name="Joko" :counter="counter"/>
-    <CounterStateless name="Asoy" :counter="counter"/>
-    <button @click="counter++">Increment Counter</button>
+    <!-- Ini contoh penggunaan prop menggunakan variabel ref() mirip share state dan component event (emits) yang @click -->
+    <CounterStateless name="Joko" :counter="counter" :increment="1" @click="increment"/>
+    <CounterStateless name="Asoy" :counter="counter" :increment="2" @click="increment"/>
 </template>
 
 <style scoped>

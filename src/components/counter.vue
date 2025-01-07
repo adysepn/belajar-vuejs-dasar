@@ -16,15 +16,12 @@ async function increment() {
     };
 
     await nextTick();
-
     counter.value.count++;
     
     await nextTick();
-
     counter.value.count++;
     
     await nextTick();
-
     console.log('Increment count after tick');
 }
 
