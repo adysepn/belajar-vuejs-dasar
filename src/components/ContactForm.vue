@@ -50,6 +50,6 @@ const model = defineModel({
     </form>
 </template>
 
-<style scope>
+<style scoped>
     
 </style>

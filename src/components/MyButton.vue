@@ -11,7 +11,7 @@ import { useAttrs } from 'vue'
 // const props = defineProps(["contoh"])
 // console.log(props)
 
-const attr = useAttrs();
+const attr = useAttrs();  // Mengambil semua attribute yang ada pada element
 console.log(attr)
 
 </script>
@@ -22,6 +22,6 @@ console.log(attr)
     <!-- <button> My Button </button>  -->
     <!-- Harus single element agar falltrough dapat terjadi -->
 </template>
-<style scope>
+<style scoped>
     
 </style>

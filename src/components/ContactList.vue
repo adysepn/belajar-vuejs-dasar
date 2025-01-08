@@ -36,6 +36,6 @@
         <p>Message: {{ message }}</p>
     </div>
 </template>
-<style scope>
+<style scoped>
     
 </style>
