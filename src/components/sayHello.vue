@@ -16,7 +16,7 @@ function sayHello() {
 //     return `${person.firstName} ${person.lastName}`;
 // }
 
-// Agar fullname() tidak dipanggil terus menerus, kita bisa menggunakan computed
+// Agar fungsi fullname() tidak dipanggil terus menerus saat halaman dirender ulang, kita bisa menggunakan computed
 const fullname = computed(() => {
     console.log('fullname called');
     return `${person.firstName} ${person.lastName}`;
